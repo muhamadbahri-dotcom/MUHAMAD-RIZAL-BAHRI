@@ -1,0 +1,173 @@
+/* Reset & Fondasi */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header & Navigasi */
+header {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #ffffff;
+    padding: 2.5rem 1rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+header nav a {
+    color: #cbd5e1;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: #38bdf8;
+}
+
+/* Form Pencarian */
+.search-section {
+    max-width: 1100px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-section form {
+    display: flex;
+    gap: 8px;
+}
+
+.search-section input[type="text"] {
+    padding: 8px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    font-size: 0.9rem;
+    width: 220px;
+    transition: border-color 0.2s ease;
+}
+
+.search-section input[type="text"]:focus {
+    border-color: #0284c7;
+}
+
+.search-section button {
+    padding: 8px 16px;
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.search-section button:hover {
+    background-color: #0369a1;
+}
+
+/* Layout Main & Aside (Flexbox) */
+main {
+    max-width: 1100px;
+    margin: 20px auto 40px;
+    padding: 0 20px;
+    display: flex;
+    gap: 24px;
+}
+
+#content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+article {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+}
+
+article h2 {
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* Sidebar (Aside) */
+aside {
+    flex: 1;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    align-self: flex-start;
+}
+
+/* Memperbaiki foto agar bulat sempurna & tidak lonjong */
+.profile-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    border: 3px solid #0284c7;
+}
+
+aside h3 {
+    color: #0f172a;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 6px;
+}
+
+aside p {
+    font-size: 0.95rem;
+    color: #475569;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Media Query Responsif (HP) */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column-reverse;
+    }
+
+    .search-section {
+        justify-content: center;
+    }
+
+    .search-section input[type="text"] {
+        width: 100%;
+    }
+}
